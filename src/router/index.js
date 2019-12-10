@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Index from '@/views/index/Index'
 import StudyFlex from '@/views/study-flex/StudyFlex'
+import StudyComponent from '@/views/study-component/StudyComponent'
 
 Vue.use(VueRouter)
 
@@ -18,6 +19,11 @@ export default new VueRouter({
             path: '/study-flex',
             name: 'studyFlex',
             component: StudyFlex
+        },
+        {
+            path: '/study-component',
+            name: 'studyComponent',
+            component: StudyComponent
         }
     ]
 })

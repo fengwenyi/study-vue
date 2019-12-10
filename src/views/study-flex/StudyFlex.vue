@@ -38,8 +38,9 @@
     }
 </script>
 
-<style lang="less">
+<style lang="less" scoped>
 @import "StudyFlex";
+
 .box-1 {
     display: flex;
 }
