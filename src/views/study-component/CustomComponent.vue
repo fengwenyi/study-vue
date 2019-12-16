@@ -11,6 +11,8 @@
 
         <br>
         <input @click="sendMsg" type="button" value="给父组件传递值">
+        <br>
+        <button @click="handleSubtitle">副标题</button>
     </div>
 </template>
 
@@ -20,7 +22,9 @@
         props: [
             "msg",
             "mSay",
-            "_this"
+            "_this",
+            'dataFiled',
+            'form'
         ],
         methods: {
             componentName() {
@@ -32,6 +36,9 @@
             sendMsg(){
                 //func: 是父组件指定的传数据绑定的函数，this.msg:子组件给父组件传递的数据
                 this.$emit('func', '子组件给父组件传值')
+            },
+            handleSubtitle() {
+                this.form[this.dataFiled] = '这是子组件传出去的副标题'
             }
         }
     }
